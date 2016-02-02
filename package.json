@@ -1,0 +1,17 @@
+{
+  "name": "node_mailer",
+  "version": "1.0.0",
+  "description": "It will receive api form data calls and will shot an email to me",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wonsik jeong",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "hbs": "^4.0.0",
+    "mongoose": "^4.3.7"
+  }
+}
