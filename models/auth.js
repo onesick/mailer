@@ -35,24 +35,34 @@ var auth = {
   validate: function(username, password){
 
     // assuming the validate was successful and DB returns userDATA obj
+    if(username ==='onesick'){
     var userData = {
       name: 'wonsik jeong',
       role: 'admin',
       username: 'onesick'
     };
     return userData;
+  }else{
+    return false;
+  }
   },
 
-  validateUser: function(key){
+  validateUser: function(username){
 
     // assuming the validate was successful and DB returns userDATA obj. This step is for validating user role.
+    if(username === 'onesick'){
     var userData = {
       name: 'wonsik jeong',
       role: 'admin',
       username: 'onesick'
     };
     return userData;
+  } else{
+    return false;
+  }
+
   },
+}
 
   function genToken(user){
     var expires = expiresIn(7);
@@ -73,6 +83,6 @@ var auth = {
     var currentDate = new Date();
     return currentDate.setDate(currentDate.getDate() + days);
   }
-}
+
 
 module.exports = auth;
